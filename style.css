@@ -1,0 +1,200 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    /* background-color: rgb(166, 95, 95); */
+    /* position: fixed; */
+}
+.wrap{
+    margin:0px;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    background-color: rgb(166, 95, 95);
+    
+   
+}
+.card{
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid; */
+    position: relative ;
+    perspective: 800px;
+     /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* transform: scaleX(-1) */
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 7px;
+    
+}
+.front{
+background-image: url(https://itproger.com/img/courses/1476977240.jpg);
+/* transform: rotatey(360deg); */
+/* transform: rotateX(360deg); */
+background-position: center;
+box-shadow: 5px 2px 20px;
+/* transform: scaleX(-1); */
+/* backface-visibility: hidden; */
+
+}
+.back{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/919/919826.png)  ;
+   /* object-fit: contain; */
+    transform: rotatey(180deg);
+    /* transform: rotateX(180deg); */
+    box-shadow: 5px 8px 7px;
+    background-position: center;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-color: #0096dc;
+    /* backface-visibility: hidden; */
+    /* transition: .5s; */
+    /* transform: scaleX(1); */
+}
+.card:hover .front{
+    transform:rotatey(180deg);
+    /* transform: scaleX(1) */
+}
+.card:hover .back{
+    transform:rotatey(360deg);
+    /* transform: scaleX(-1); */
+} 
+
+.section{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(166, 95, 95);
+    perspective: 700px;
+}
+
+.phone,
+.tablet,
+.desctop{
+    transition: 1s;
+    border-radius: 10px;
+    background-color: wheat;
+    box-shadow: 5px 8px 24px;
+    transform: translateY(100%);
+    
+}
+.section:hover .phone,
+.section:hover .tablet,
+.section:hover .desctop{
+    transform: translateY(0);
+    transform: translateY(10px) rotateY(-10deg);
+}
+.phone{
+    width: 100px;
+    height: 180px;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    background-image:url(mobile-phone-svgrepo-com.svg);
+    background-color: rgb(166, 95, 95);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+    transition-delay: .2s;
+}
+.tablet{
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: 2;
+    background-image: url(free-tablet-material-svgrepo-com.svg);
+    background-color: rgb(166, 95, 95);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition-delay: .4s;
+}
+.desctop{
+    width: 480px;
+    height: 330px;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    background-image: url(desktop-svgrepo-com.svg);
+    background-color: rgb(166, 95, 95);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition-delay: .6s;
+}
+
+.section1{
+    user-select: none;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(166, 95, 95);
+    perspective: 500px;
+}
+
+.container-origin{
+    transform: translate(0);
+}
+
+.container{
+   width: 630px;
+    margin:auto;
+    /* background-color: rgb(118, 83, 83); */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   /* height: 100vh; */
+   transition: 1s;
+   transform: rotateX(55deg) rotateY(10deg) rotateZ(-50deg);
+    transform-style: preserve-3d;
+    /* transform: translateY(20px); */
+}
+
+img{
+    width: 100%;
+    border-radius:20px;
+}
+
+.cards{
+    width: 150px;
+    height: 200px;
+   /* background-color: beige; */
+    max-width: 100%;
+    margin: 10px;
+    transition: .3s;
+    box-shadow: 2px 2px 20px ;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.cards:hover{
+    cursor: pointer;
+    /* transform: translateZ(10px); */
+}
+.cards-active{
+    transform: rotateX(-204deg) rotateY(-132deg) rotateZ(-141deg);
+    
+}
